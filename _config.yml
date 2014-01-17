@@ -1,0 +1,19 @@
+title: Macromancy
+
+author:
+  name: Max Countryman
+  bio: https://twitter.com/MaxCountryman
+
+links:
+  - title: Email
+    url: mailto:maxc@me.com?Subject="Hello via Macromancy"
+  - title: Twitter
+    url: https://twitter.com/MaxCountryman
+    external: true
+  - title: GitHub
+    url: https://github.com/maxcountryman
+    external: true
+
+timezone: America/Los_Angeles
+pygments: true
+markdown: redcarpet

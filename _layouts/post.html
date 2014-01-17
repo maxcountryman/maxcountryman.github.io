@@ -1,0 +1,21 @@
+{% include head.html %}
+
+<a href="/index.html" class="index">&laquo</a>
+
+<div class="wrapper">
+
+    <div class="header">
+        <h1>{{ page.title }}{% if page.subtitle %}: {{page.subtitle}}{% endif %}</h1>
+        <h2><a href="{{ site.author.bio }}">{{ site.author.name }}</a></h2>
+        <h3>{{ page.date | date: "%B %d, %Y" }}</h3>
+    </div>
+
+    <div class="body" id="{{ post.id }}">
+        <article>
+        {{ content }}
+        </article>
+    </div>
+
+</div>
+
+{% include footer.html %}
