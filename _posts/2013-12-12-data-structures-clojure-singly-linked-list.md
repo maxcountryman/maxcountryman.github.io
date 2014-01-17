@@ -164,7 +164,7 @@ nest invocations of the `Node` object. What if we do something like this:
 
 ```clojure
 => (def linked-list (Node. "foo" (Node. "bar" (Node. "baz" nil))))
-=> (.car (.cdr node))
+=> (.car (.cdr linked-list))
 "bar"
 ```
 
