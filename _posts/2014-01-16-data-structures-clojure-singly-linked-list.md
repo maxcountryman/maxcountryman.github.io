@@ -1,7 +1,6 @@
 ---
 layout: post
-title: "Data Structures in Clojure"
-subtitle: "Singly-Linked Lists"
+title: "Data Structures in Clojure: Singly-Linked Lists"
 date: 2014-01-16 17:36:24
 ---
 
@@ -397,7 +396,7 @@ pointers in place.
           (recur cur->cdr (.setCdr cur new-list)))))))
 ```
 
-However this is slightly dangerous if our linked list is bound to var such as
+However this is slightly dangerous if our linked list is bound to a var such as
 `linked-list`. Since the original pointer bound to the var will become the tail
 of the list and references to the rest of the list will not be accessible. For
 simplicity we will not take that approach here.
@@ -441,7 +440,7 @@ via `clojure.lang.Seqable`.
     (loop [cur this acc ()]
       (if-not cur
         acc
-        (recur (.getCdr cur) (concat acc (list (.getCar cur))))))))
+        (recur (.getCdr cur) (conj acc (list (.getCar cur))))))))
 ```
 
 Here we have implemented `clojure.lang.Seqable`. Our goal in defining the `seq`
@@ -486,7 +485,6 @@ all of them or we may find we end up with strange errors such as
 implemented.
 
 ## Conclusion
-
 This is the end of our exploration of a linked list implementation. While our
 implementation is simple, it is correct and usable. By utilizing Clojure's
 `deftype` we have created a proper JVM class. This class could even be used
